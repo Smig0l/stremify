@@ -34,6 +34,7 @@ export async function scrapeEurostreaming(imdb, season, episode) {
           })
 
           const episodeData = await episodeFetch.text()
+          console.log(episodeData);
 
           if (remote != "true") {
             /*
@@ -62,6 +63,7 @@ export async function scrapeEurostreaming(imdb, season, episode) {
           const supervideomatch = supervideoregex.exec(episodeData);
           if (supervideomatch != null) {
             const url = await evalResolver(new URL(supervideomatch[1].replace(/(.tv\/)(.*)/, '$1e/$2').replace(".html", ""))) // gives us an embed
+            console.log(url);
             
             finalstreams.push(
                 {
