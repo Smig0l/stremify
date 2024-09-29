@@ -11,7 +11,7 @@ const name = process.env.name || 'Stremify'
 
 export const manifest = {
 	"id": "com.stremify",
-	"version": "2.7.0",
+	"version": "2.7.2",
 	"catalogs": [],
 	"resources": [
 		"stream"
