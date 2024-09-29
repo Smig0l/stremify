@@ -5,3 +5,6 @@
 <p align="center">A selfhosted addon for Stremio allowing for streaming from numerous different sources via @movie-web/providers.</p>
 <h2 align="center"> Getting Started </h2>
 To get started with selfhosting, look into the <a href="https://github.com/stremify/stremify/wiki">wiki</a>.
+
+test: movie imdb -> tt3291150
+test: serie imdb -> tt15435876

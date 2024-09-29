@@ -8,11 +8,11 @@ import 'dotenv/config'
 
 const remote = process.env.disable_same_ip_embeds
 
-const baseurl = "https://mostraguarda.stream/"
+const baseurl = "https://guardahd.stream/"
 
 export async function scrapeGuardahd(imdbid) {
     const finalstreams = []
-    const url = `${baseurl}/movie/${imdbid}`;
+    const url = `${baseurl}/set-movie-a/${imdbid}`;
     try {
       const response = await fetch(url, {
         headers: {
@@ -30,9 +30,9 @@ export async function scrapeGuardahd(imdbid) {
 
       let match;
       if (remote != "true") {
-        /*
+        
         while ((match = droploadregex.exec(text)) !== null) {
-          const embedurl = `https://${match[0]}`        
+          const embedurl = `${match[0]}`
           const url = await evalResolver(new URL(embedurl))
               finalstreams.push({
                   name: "Stremify IT",
@@ -40,7 +40,7 @@ export async function scrapeGuardahd(imdbid) {
                   url: url,
                   title: `GuardaHD - auto (dropload.io)`
               })
-        }*/
+        } 
     
         while ((match = streamtaperegex.exec(text)) !== null) {
           const initialurl = await streamtapeResolve(match[0])
