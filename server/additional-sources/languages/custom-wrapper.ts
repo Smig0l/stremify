@@ -3,6 +3,7 @@ import { scrapeKinokiste } from "./de/kinokiste";
 import { scrapeMeinecloud } from "./de/meinecloud";
 import { scrapeEurostreaming } from "./it/eurostreaming";
 import { scrapeGuardahd } from "./it/guardahd";
+import { scrapeFilmPerTutti } from "./it/filmpertutti";
 import { scrapeVerdahd } from './es/verhdlink'; 
 import { scrapeCinehdplus } from './es/cinehdplus';
 import { scrapeFrenchcloud } from "./fr/frenchcloud";
@@ -29,6 +30,7 @@ const movies: Map<string, (imdbid: string, media?: any) => Promise<any>> = new M
     ["frembed", async (imdbid: string) => await scrapeFrembed(imdbid, 0, 0)],
     ["meinecloud", async (imdbid: string) => await scrapeMeinecloud(imdbid)],
     ["guardahd", async (imdbid: string) => await scrapeGuardahd(imdbid)],
+    ["filmpertutti", async (imdbid: string) => await scrapeFilmPerTutti(imdbid)],
     ["verhdlink", async (imdbid: string) => await scrapeVerdahd(imdbid)],
     ["frenchcloud", async (imdbid: string) => await scrapeFrenchcloud(imdbid)],
     //["smashystreamtr", async (imdbid: string) => await scrapeSmashystreamLang(imdbid, '0', '0', "Turkish")],
@@ -68,6 +70,7 @@ const info = new Map<string, any>([
     ["verhdlink", {name: "VerHDlink", lang_emoji: "🇪🇸🇲🇽"}],
     ["eurostreaming", {name: "EuroStreaming", lang_emoji: "🇮🇹"}],
     ["guardahd", {name: "GuardaHD", lang_emoji: "🇮🇹"}],
+    ["filmpertutti", {name: "FilmPerTutti", lang_emoji: "🇮🇹"}],
     //["smashystreamtr", {name: "Smashystream TR", lang_emoji: "🇹🇷"}],
     //["smashystreamhi", {name: "Smashystream HI", lang_emoji: "🇮🇳"}],
     ["visioncine", {name: "Visioncine (Catalog Resolver)", lang_emoji: "🇧🇷"}],
