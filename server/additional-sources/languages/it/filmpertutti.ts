@@ -67,7 +67,7 @@ export async function scrapeFilmPerTutti(imdbid) {
                 }
               });
               let text = await embedResponse.text();  
-              //console.log(text);
+              console.log("FOUND FILMPERTUTTI EMBED", text);
           }
       }
 
