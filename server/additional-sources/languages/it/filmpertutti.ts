@@ -78,7 +78,7 @@ export async function scrapeFilmPerTutti(imdbid) {
 
 
       let match;
-      if (remote != "true") {
+      //if (remote != "true") {
         
         while ((match = droploadregex.exec(text)) !== null) {
           const embedurl = `${match[0]}`
@@ -104,7 +104,7 @@ export async function scrapeFilmPerTutti(imdbid) {
               title: `FILMPERTUTTI - auto (streamtape.com)`
           })
         }
-      }
+      //}
 
       while ((match = supervideoregex.exec(text)) !== null) {
         const embedurl = `https://${match[0]}`        
